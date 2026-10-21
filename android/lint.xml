@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Read by every module (lint looks in parent folders). The two text checks
+  are errors, not warnings, to match shack-i18n-check: there are no XML
+  layouts today, so this costs nothing, and the day one arrives a literal in
+  it fails `./gradlew lint` as well as the string check.
+-->
+<lint>
+    <issue id="HardcodedText" severity="error" />
+    <issue id="SetTextI18n" severity="error" />
+</lint>

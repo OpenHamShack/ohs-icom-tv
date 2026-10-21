@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  The Icom kind's English catalog (docs/I18N.md). The kind's own, apart from
+  the host app's, because the kind is a library that moves into
+  OpenHamShack Remote whole. Whole sentences with numbered placeholders;
+  callsigns, mode names (FT8, USB-D) and frequencies arrive through the
+  placeholders already formatted and are never translated. Layouts leave
+  room for text 40% longer than this.
+-->
+<resources>
+    <!-- Heard: everything the decoders heard, as a list. -->
+    <string name="heard_title">Heard</string>
+    <string name="heard_tab_decodes">Decodes</string>
+    <string name="heard_tab_stations">Stations heard</string>
+    <string name="heard_tab_aprs">APRS</string>
+    <!-- A tab's name and how many rows it has: "Decodes (12)". -->
+    <string name="heard_tab_count">%1$s (%2$d)</string>
+    <!-- %1$s is a digital mode's name, as an identifier: FT8, FT4 or JS8. -->
+    <string name="heard_start_decoder">Start %1$s decoding</string>
+    <string name="heard_start_aprs">Start the APRS receiver</string>
+    <string name="heard_nothing">Nothing yet.</string>
+    <string name="heard_hint">OK tunes to it  ·  Back returns to the radio</string>
+    <!-- %1$s is who holds the decoder, as the Icom module names it. -->
+    <string name="heard_sub_decoding">Decoding %1$s. Newest first; OK puts the dial where it was heard, in USB-D.</string>
+    <string name="heard_sub_no_decoder">No decoder running. Start one below, or from StationFlow\'s page.</string>
+    <string name="heard_sub_stations">One row per station decoded in the last half hour, newest first.</string>
+    <string name="heard_sub_aprs">APRS stations heard. OK tunes to the channel in FM.</string>
+    <!-- %1$s is a distance, already formatted for the locale. -->
+    <string name="heard_distance_km">%1$s km</string>
+
+    <!-- SSTV: the pictures the module kept. -->
+    <string name="sstv_receiving">Receiving a picture</string>
+    <!-- %1$d is how much of the picture has arrived, in percent. -->
+    <string name="sstv_receiving_progress">Receiving a picture · %1$d%%</string>
+    <string name="sstv_none">No pictures yet.</string>
+    <plurals name="sstv_count">
+        <item quantity="one">%d picture, newest first. OK shows it full screen.</item>
+        <item quantity="other">%d pictures, newest first. OK shows one full screen.</item>
+    </plurals>
+</resources>

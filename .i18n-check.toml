@@ -1,0 +1,25 @@
+# shack-i18n-check for the Icom TV kind (repo root). tools/i18n.py runs it,
+# and the Android build's i18nCheck task runs that before the unit tests.
+# Everything not excluded here is scanned: the app and library sources, their
+# res/ XML, and the Python tools that ship nothing.
+exclude = [
+    # Unit tests: their literals are fixtures and assertion messages that no
+    # user ever reads, and a test that checks a screen's text should be free
+    # to spell the English it expects.
+    "android/*/src/test/**",
+    # Gradle output, including generated R classes and merged resources: it
+    # repeats what is already scanned in src/ and changes with every build.
+    "**/build/**",
+    # fakeflow is a test double of the Icom module's API, run on a
+    # developer's machine; its sentences imitate the server's for the
+    # client to show, and the real ones are the Icom module's to translate.
+    "tools/fakeflow.py",
+    # Draws the TV banner PNG at development time; its only text is the
+    # product name, which is a brand, not a sentence.
+    "android/tools/make-banner.py",
+]
+
+[kotlin]
+# The TV kit's own text-taking composables and the session's toast line:
+# each puts its argument in front of a person, the same as Text() does.
+sinks = ["TvSection(", "TvTextDialog(", "say("]

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  The test host's English catalog (docs/I18N.md). Whole sentences with
+  numbered placeholders, so a translation can reorder them; names, addresses
+  and versions arrive through the placeholders and are never translated.
+  Layouts leave room for text 40% longer than this.
+-->
+<resources>
+    <string name="app_name">OpenHamShack Icom</string>
+
+    <!-- Joins the parts of a one-line description: an address, a version, a state. -->
+    <string name="list_separator">" · "</string>
+
+    <!-- The picker: choosing which Icom module to open. -->
+    <string name="picker_tagline">Listen to and tune an Icom through StationFlow. Receive only: this TV never transmits.</string>
+    <string name="picker_section_found">On this network</string>
+    <string name="picker_looking">Looking for StationFlow on this network… Over the tailnet, add it by address.</string>
+    <!-- %1$s is the server's OpenHamShack version, e.g. 0.4.2. -->
+    <string name="picker_found_platform">OpenHamShack %1$s - Icom is one of its apps</string>
+    <!-- %1$s is the Icom app's version. -->
+    <string name="picker_found_single">OpenHamShack Icom %1$s</string>
+    <string name="picker_open">Open</string>
+    <string name="picker_section_saved">Saved</string>
+    <string name="picker_none_saved">None yet.</string>
+    <string name="picker_section_add">Add</string>
+    <string name="picker_type_address">Type an address…</string>
+    <string name="picker_type_address_example">e.g. https://198.51.100.208/icom/ or a tailnet name.</string>
+    <string name="picker_signed_in">signed in</string>
+    <string name="picker_certificate_trusted">certificate trusted</string>
+    <string name="picker_forget">Forget</string>
+    <string name="picker_forget_confirm">Press again to forget</string>
+
+    <string name="address_title">OpenHamShack Icom\'s address</string>
+    <string name="address_hint">Its base URL: https://&lt;host&gt;/icom/ on the LAN, or the tailnet name.</string>
+
+    <!-- %1$s is the saved server's name. -->
+    <string name="password_title">Password for %1$s</string>
+    <string name="password_hint">OpenHamShack Icom\'s access password. This TV keeps the session, not the password, and only ever listens and tunes.</string>
+    <!-- %1$s is why a password is asked for again (one of the sign_in_* sentences); %2$s is password_hint. -->
+    <string name="password_hint_with_reason">%1$s %2$s</string>
+
+    <string name="trust_title">Trust this certificate?</string>
+    <string name="trust_title_changed">The certificate has changed</string>
+    <string name="trust_changed_warning">This TV trusted a different authority for this server before. That happens when Dock360 is reinstalled - and when something else is answering in its place. Only trust it if you know why it changed.</string>
+    <!-- %1$s is the server's address. -->
+    <string name="trust_explain">%1$s uses a certificate from its own authority, which this TV does not know. Compare this fingerprint with the one Dock360 shows, then trust it for this server only.</string>
+    <string name="trust_confirm">Trust</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- Messages above the picker while a server opens. %1$s is a server's name or address. -->
+    <string name="connecting">Connecting to %1$s…</string>
+    <!-- %2$s is the reason, as the network library gave it (English). -->
+    <string name="error_directory">%1$s: could not read its list of apps (%2$s)</string>
+    <string name="error_no_icom">%1$s has no StationFlow installed</string>
+    <!-- %1$s is the address; %2$s what went wrong, as the network library gave it (English). -->
+    <string name="error_open">%1$s: %2$s</string>
+    <string name="error_untrusted_no_ca">%1$s has a certificate this TV does not trust, and its CA could not be fetched: %2$s</string>
+    <string name="sign_in_failed">Sign-in failed</string>
+    <string name="sign_in_session_ended">The session ended; sign in again.</string>
+    <!-- %1$s is the reason the Icom module gave. -->
+    <string name="sign_in_signed_out">Signed out by StationFlow (%1$s). Sign in again.</string>
+</resources>

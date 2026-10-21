@@ -1,0 +1,52 @@
+# Baseline for shack-i18n-check (docs/I18N.md): user-visible literals that
+# were in the code before the check arrived, one per file and literal. M3
+# moves each into a catalog and deletes its line; the check fails on any
+# literal not listed here or in i18n-allow.txt, and on a line here that no
+# longer matches. Rewrite with tools/i18n.py baseline, never by hand-adding.
+# path | "literal" | pending
+android/core-candidates/src/main/java/com/openhamshack/core/tv/TvKit.kt | "Cancel" | pending
+android/core-candidates/src/main/java/com/openhamshack/core/tv/TvKit.kt | "OK" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/StationFlowSession.kt | "APRS receiver started" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/StationFlowSession.kt | "Decoding $mode" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/StationFlowSession.kt | "No frequency to tune to for ${h.call ?: \"that\"}" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/StationFlowSession.kt | "OpenHamShack Icom did not answer: ${e.message ?: e.javaClass.simpleName}" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/StationFlowSession.kt | "SSTV receiver started" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/StationFlowSession.kt | "Tuned to ${h.call ?: \"\"} ${formatHz(hz)} ${mode ?: \"\"}" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/StationFlowSession.kt | "View only: this TV may listen but not tune" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/radio/RadioControls.kt | "Band scope: tap to tune there" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/radio/RadioControls.kt | "Frequency" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/radio/RadioControls.kt | "Frequency: drag to tune, tap to change the step" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/ui/Scope.kt | "Waiting for the band scope…" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/ui/SstvScreen.kt | "   ·   ${index + 1} of ${pictures.size}   ·   ◀ ▶ more   ·   Back closes" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/ui/SstvScreen.kt | "Coming in…" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/ui/SstvScreen.kt | "Loading…" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/ui/SstvScreen.kt | "New pictures full screen: off" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/ui/SstvScreen.kt | "New pictures full screen: on" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/ui/SstvScreen.kt | "No picture" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/ui/SstvScreen.kt | "Start the SSTV receiver" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/ui/StationFlowTouchScreen.kt | "Connecting…" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/ui/StationFlowTouchScreen.kt | "ON AIR · the radio is transmitting" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/ui/StationFlowTvScreen.kt | "%02d:%02d:%02d UTC" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/ui/StationFlowTvScreen.kt | "Decodes…" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/ui/StationFlowTvScreen.kt | "Latest decodes - OK tunes to one" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/ui/StationFlowTvScreen.kt | "Nothing decoded yet. Start a decoder from Decodes & spots…" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/ui/StationFlowTvScreen.kt | "ON AIR · the radio is transmitting" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/ui/StationFlowTvScreen.kt | "SSTV…" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/ui/StationFlowTvScreen.kt | "STEP" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/ui/StationFlowTvScreen.kt | "Stations heard - OK tunes to one" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/ui/StationFlowTvScreen.kt | "Tune…" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/ui/TunePanel.kt | "Back closes. Menu on the remote opens this from anywhere." | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/ui/TunePanel.kt | "Band" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/ui/TunePanel.kt | "Close" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/ui/TunePanel.kt | "Filter" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/ui/TunePanel.kt | "Frequency" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/ui/TunePanel.kt | "In MHz, for example 145.5 or 432.2 or 1296.2. kHz works too (145500)." | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/ui/TunePanel.kt | "Mode" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/ui/TunePanel.kt | "Sign in…" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/ui/TunePanel.kt | "Split off" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/ui/TunePanel.kt | "Split on" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/ui/TunePanel.kt | "Step for ◀ ▶ on the dial" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/ui/TunePanel.kt | "Tune" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/ui/TunePanel.kt | "Type a frequency…" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/ui/TunePanel.kt | "VFO and split" | pending
+android/kind-stationflow/src/main/java/com/openhamshack/kind/stationflow/ui/TunePanel.kt | "View only: this TV may listen but not tune. Sign in with StationFlow's password to tune." | pending

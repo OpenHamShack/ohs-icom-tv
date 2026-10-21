@@ -1,0 +1,7 @@
+# Exceptions to shack-i18n-check (docs/I18N.md): literals a person reads that
+# are not language, so no catalog should translate them. A reason is
+# required, and an entry that matches nothing fails the check.
+# glob | "literal" (exact, JSON-quoted) | reason
+android/kind-stationflow/**/ui/*.kt | "VFO A" | the radio's own label for its first VFO, printed on the Icom's panel and LCD; shown as the radio shows it
+android/kind-stationflow/**/ui/*.kt | "VFO B" | the radio's own label for its second VFO, as the Icom prints it
+android/kind-stationflow/**/ui/StationFlowTvScreen.kt | "SPLIT" | the Icom LCD's split indicator, copied as the radio shows it beside the radio-faithful dial

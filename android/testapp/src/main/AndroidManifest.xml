@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- NsdManager's Bonjour browse needs the multicast lock on some TVs
+         (Fire OS drops multicast without it while the screen is idle). -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+
+    <!-- Deliberately absent: RECORD_AUDIO. This app receives and never
+         transmits, so it has no use for a microphone, and leaving the
+         permission out means no later change can quietly grow a transmit
+         audio path without it showing in the manifest diff. -->
+
+    <!-- Every feature optional, so the APK installs on any Android TV,
+         Google TV or Fire TV - and, for testing, on a phone. A TV has no
+         touchscreen; declaring it required (the default when a permission
+         implies it) would make the store hide the app on exactly the devices
+         it is for. -->
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+    <uses-feature android:name="android.hardware.faketouch" android:required="false" />
+    <uses-feature android:name="android.hardware.wifi" android:required="false" />
+    <uses-feature android:name="android.software.leanback" android:required="false" />
+
+    <!-- Cleartext: StationFlow is reached on the LAN as plain HTTP through
+         Dock360's path routing, or directly on its port. The address is
+         whatever the operator typed or Bonjour found; the app builds no URL
+         from anything else. -->
+    <application
+        android:name=".TestApp"
+        android:allowBackup="false"
+        android:banner="@drawable/tv_banner"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.StationFlowTv">
+
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize|screenLayout|smallestScreenSize|keyboardHidden|keyboard|navigation|density|uiMode"
+            android:exported="true"
+            android:screenOrientation="unspecified"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <!-- The TV launchers' own list (Android TV, Google TV, Fire
+                     TV) shows only activities in this category, by banner. -->
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

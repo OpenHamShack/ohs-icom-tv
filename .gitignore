@@ -1,0 +1,9 @@
+# Gradle output, in every module. (It named only android/app/build/ before
+# the split into modules, and three commits carried build output as a result.)
+build/
+.gradle/
+.kotlin/
+android/local.properties
+*.apk
+*.pid
+__pycache__/
